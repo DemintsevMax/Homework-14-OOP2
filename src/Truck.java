@@ -1,11 +1,23 @@
-public class Truck extends Vehicle {
-    @Override
+class Truck extends Vehicle {
+
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+
     public void checkEngine() {
-        super.checkEngine();
-        System.out.println("Дополнительная проверка для грузовика");
+        System.out.println("Проверяем двигатель грузовика " + modelName);
     }
 
     public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+        System.out.println("Проверяем прицеп грузовика " + modelName);
+    }
+
+    @Override
+    public void performService() {
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
+        }
+        checkEngine();
+        checkTrailer();
     }
 }

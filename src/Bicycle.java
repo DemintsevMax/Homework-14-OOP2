@@ -1,3 +1,13 @@
-public class Bicycle extends Vehicle {
-    // Дополнительных методов нет, поэтому используем родительские методы
+class Bicycle extends Vehicle {
+
+    public Bicycle(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+
+    @Override
+    public void performService() {
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
+        }
+    }
 }

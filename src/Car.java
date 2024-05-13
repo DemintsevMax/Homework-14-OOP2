@@ -1,9 +1,18 @@
-public class Car extends Vehicle {
-    @Override
-    public void checkEngine() {
-        super.checkEngine();
-        System.out.println("Дополнительная проверка для автомобиля");
+class Car extends Vehicle {
+
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
-    public void updateTyre() {
-        System.out.println("Меняем все покрышки");
-}}
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель автомобиля " + modelName);
+    }
+
+    @Override
+    public void performService() {
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
+        }
+        checkEngine();
+    }
+}
