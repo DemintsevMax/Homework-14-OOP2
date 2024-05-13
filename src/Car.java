@@ -4,4 +4,6 @@ public class Car extends Vehicle {
         super.checkEngine();
         System.out.println("Дополнительная проверка для автомобиля");
     }
-}
+    public void updateTyre() {
+        System.out.println("Меняем все покрышки");
+}}

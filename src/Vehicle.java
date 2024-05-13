@@ -2,6 +2,7 @@ public class Vehicle {
     private String modelName;
     private int wheelsCount;
 
+
     public String getModelName() {
         return modelName;
     }
@@ -20,9 +21,13 @@ public class Vehicle {
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
+
+
     }
+
 
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
+
 }
